@@ -12,8 +12,9 @@ The use case in mind is to handle data storms for streams that would cause the s
 This custom Nifi Processor for Pravega acts as flow buffer that controls the ingest into the stream processing system (Nifi) and 
 guarentees continuity without data loss and strict ordering.
 
-Nifi has build-in capabilites to manage and protect the data in motion with repositories stored on local disks. While this
-custom Nifi Processor for Pravege provides survival for data ingest while data is exploding before ingested. 
+Nifi has build-in capabilites to manage and protect the data in motion with repositories stored on local disks and configurable 
+queue management to handle back pressure. While this custom Nifi Processor for Pravege provides survival for data ingest while 
+data is exploding before ingested. 
 
 Note: To protect/scale NIFI repositories on local disk other software defined storage primitives like ScaleIO can be used. 
 
