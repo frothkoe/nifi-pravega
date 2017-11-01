@@ -4,13 +4,13 @@ Persist and read streaming data with Nifi and Pravega for data burst
 #
 # Abstract 
 #
-Purpose of the project is to use very fast and low latency storage primitives of Pravega (software defined storage) to 
-persist streaming data. 
+Purpose of the project is to use very fast and low latency storage primitives of Pravega (software defined storage see: http://pravega.io)
+to persist streaming data. 
 
 The use case in mind is to handle data storms for streams that would cause the system to overload and/or dropping events or panic.
 
-This custome Nifi Processor Pravega acts as flow buffer that controls the ingest into the event processing system and 
-guarentees continuity of the stream processiong without any data loss.
+This custom Nifi Processor for Pravega acts as flow buffer that controls the ingest into the stream processing system (Nifi) and 
+guarentees continuity without data loss and strict ordering.
 
 Nifi has build-in capabilites to manage and protects the data in repositories with local storage. While Nifi-Pravege provides survival for
 data ingest while data is exploding before it is ingested. 
